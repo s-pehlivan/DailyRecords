@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class RecordsTableViewController: UITableViewController {
     
@@ -13,7 +14,6 @@ class RecordsTableViewController: UITableViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +24,7 @@ class RecordsTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        data.loadData(context: context)
         tableView.reloadData()
     }
     

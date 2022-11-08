@@ -12,6 +12,7 @@ class DataManipulation {
     
     static var recordsList = [Record]()
     
+    
     func saveData(context: NSManagedObjectContext) {
         do {
             try context.save()
@@ -28,5 +29,8 @@ class DataManipulation {
             print("Error loading data: \(error)")
         }
     }
-
+    
+    func deleteData(at index: Int, context: NSManagedObjectContext) {
+        context.delete(DataManipulation.recordsList[index])
+    }
 }

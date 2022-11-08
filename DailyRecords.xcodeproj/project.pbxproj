@@ -16,6 +16,7 @@
 		974F18A8290FC94300754705 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 974F18A6290FC94300754705 /* LaunchScreen.storyboard */; };
 		974F18B4290FC9F100754705 /* DataManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F18B3290FC9F100754705 /* DataManipulation.swift */; };
 		974F18B6290FCA9800754705 /* RecordsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974F18B5290FCA9800754705 /* RecordsTableViewController.swift */; };
+		97A47ED2291A95BD0060E291 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A47ED1291A95BD0060E291 /* Alert.swift */; };
 		97ABAC8B290FCB10004DD5ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ABAC8A290FCB10004DD5ED /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		974F18A9290FC94300754705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		974F18B3290FC9F100754705 /* DataManipulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManipulation.swift; sourceTree = "<group>"; };
 		974F18B5290FCA9800754705 /* RecordsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTableViewController.swift; sourceTree = "<group>"; };
+		97A47ED1291A95BD0060E291 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		97ABAC8A290FCB10004DD5ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				97ABAC8A290FCB10004DD5ED /* Constants.swift */,
+				97A47ED1291A95BD0060E291 /* Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				974F18B4290FC9F100754705 /* DataManipulation.swift in Sources */,
 				97ABAC8B290FCB10004DD5ED /* Constants.swift in Sources */,
 				974F18A3290FC94300754705 /* DailyRecords.xcdatamodeld in Sources */,
+				97A47ED2291A95BD0060E291 /* Alert.swift in Sources */,
 				974F189B290FC94300754705 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

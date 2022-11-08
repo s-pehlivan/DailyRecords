@@ -57,7 +57,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="dG4-bo-DpU">
                                 <rect key="frame" x="15" y="98" width="384" height="754"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01 Nov 12:45 - 0 Char" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZZ-dE-V6J">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01 Nov 12:45 - 0 Char" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="JZZ-dE-V6J">
                                         <rect key="frame" x="0.0" y="0.0" width="384" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="4cS-zd-Tnb"/>
