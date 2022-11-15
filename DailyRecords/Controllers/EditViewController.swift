@@ -38,9 +38,11 @@ class EditViewController: UIViewController {
             if let index = DataManipulation.recordsList.firstIndex(where: {$0 === safeRecord}) {
                 currentIndex = index
             }
+            navigationItem.title = "Update"
         } else {
             deleteButton.title = ""
             dateLabel.text = "\(formatDate())  -  0 Char"
+            navigationItem.title = "New Note"
         }
         
     }
