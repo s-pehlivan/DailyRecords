@@ -13,14 +13,17 @@ class RecordsTableViewController: UITableViewController {
     let data = DataManipulation()
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    var selectedCategory: Category? {
+        didSet{
+            data.loadData(context: context)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.backButtonTitle = ""
-        
-        data.loadData(context: context)
-        tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,12 +57,25 @@ extension RecordsTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let record = DataManipulation.recordsList[indexPath.row]
+        var text = ""
+        if record.text == nil {
+            text = ""
+        } else if record.text!.count > 50 {
+            text += "\(record.text!.prefix(49))..."
+        } else {
+            text = record.text!
+        }
+        
         
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellRecordID, for: indexPath)
         
         var content = cell.defaultContentConfiguration()
-        content.text = "\(record.title ?? "1 op") - \(record.text ?? "Hello op")"
+        content.text = record.title!.uppercased()
+        content.secondaryText = text
+        content.textProperties.color = UIColor(named: "Title 2")!
+        content.secondaryTextProperties.color = UIColor(named: "Title 2")!
         cell.contentConfiguration = content
+        cell.backgroundColor = UIColor(named: "Cell")
         
         return cell
     }

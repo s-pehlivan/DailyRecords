@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jpD-xk-tpE">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,16 +13,21 @@
             <objects>
                 <tableViewController id="Kbo-KR-IpT" customClass="RecordsTableViewController" customModule="DailyRecords" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Y8x-Np-3Rd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <color key="separatorColor" name="Cell"/>
+                        <color key="sectionIndexColor" name="Title 2"/>
+                        <color key="sectionIndexBackgroundColor" name="Cell"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellRecordID" id="Sok-Zi-Uxq">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sok-Zi-Uxq" id="IQl-tq-zJR">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" name="Cell"/>
+                                    <color key="tintColor" name="Title 2"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -33,6 +38,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Daily Records" id="Rtr-yb-M9w">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="9Bz-hR-3RU">
+                            <color key="tintColor" name="Title 1"/>
                             <connections>
                                 <segue destination="mXm-ld-y8W" kind="show" identifier="forAddSegue" id="mzO-ft-gXJ"/>
                             </connections>
@@ -51,33 +57,35 @@
             <objects>
                 <viewController id="mXm-ld-y8W" customClass="EditViewController" customModule="DailyRecords" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="alc-n9-2Oc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="dG4-bo-DpU">
-                                <rect key="frame" x="15" y="98" width="384" height="754"/>
+                                <rect key="frame" x="15" y="98" width="360" height="702"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01 Nov 12:45 - 0 Char" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="JZZ-dE-V6J">
-                                        <rect key="frame" x="0.0" y="0.0" width="384" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="4cS-zd-Tnb"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="Title 2"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W8O-Sb-h8S">
-                                        <rect key="frame" x="0.0" y="32" width="384" height="35"/>
+                                        <rect key="frame" x="0.0" y="32" width="360" height="35"/>
+                                        <color key="backgroundColor" name="Cell"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="VrX-iK-SDs"/>
                                         </constraints>
+                                        <color key="textColor" name="Title 2"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="n9C-kk-ejZ">
-                                        <rect key="frame" x="0.0" y="79" width="384" height="675"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <color key="textColor" systemColor="labelColor"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n9C-kk-ejZ">
+                                        <rect key="frame" x="0.0" y="79" width="360" height="623"/>
+                                        <color key="backgroundColor" name="Cell"/>
+                                        <color key="textColor" name="Title 2"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -93,7 +101,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uTW-Jx-Bc7"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="uTW-Jx-Bc7" firstAttribute="bottom" secondItem="dG4-bo-DpU" secondAttribute="bottom" constant="10" id="GLP-yd-gUR"/>
                             <constraint firstItem="dG4-bo-DpU" firstAttribute="top" secondItem="uTW-Jx-Bc7" secondAttribute="top" constant="10" id="Jl7-bL-VBa"/>
@@ -104,11 +112,13 @@
                     <navigationItem key="navigationItem" id="O61-HG-8zq">
                         <rightBarButtonItems>
                             <barButtonItem title="Done" id="DEj-yp-jk5">
+                                <color key="tintColor" name="Title 1"/>
                                 <connections>
                                     <action selector="donePressed:" destination="mXm-ld-y8W" id="9dh-fK-qvn"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Delete" id="94g-B0-dmp">
+                                <color key="tintColor" name="Title 1"/>
                                 <connections>
                                     <action selector="deletePressed:" destination="mXm-ld-y8W" id="lnr-kK-NN4"/>
                                 </connections>
@@ -132,29 +142,39 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jpD-xk-tpE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="l6r-Tc-mwF">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="Title 2"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="Title 2"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Kbo-KR-IpT" kind="relationship" relationship="rootViewController" id="TPp-DG-ROf"/>
+                        <segue destination="Kbo-KR-IpT" kind="relationship" relationship="rootViewController" id="HNW-5i-Ke3"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X1C-fT-7HV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-204" y="65"/>
+            <point key="canvasLocation" x="-43" y="65"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="mzO-ft-gXJ"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="plus" catalog="system" width="128" height="113"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="plus" catalog="system" width="32" height="32"/>
+        <namedColor name="Background">
+            <color red="0.98823523520000001" green="0.94117647410000005" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Cell">
+            <color red="0.93725490570000003" green="0.87450981139999995" blue="0.74509805439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Title 1">
+            <color red="0.30980393290000002" green="0.52549022440000004" blue="0.56078433989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Title 2">
+            <color red="0.1647058874" green="0.36078432199999999" blue="0.42352938649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>

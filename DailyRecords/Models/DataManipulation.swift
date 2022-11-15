@@ -11,7 +11,7 @@ import CoreData
 class DataManipulation {
     
     static var recordsList = [Record]()
-    
+        
     
     func saveData(context: NSManagedObjectContext) {
         do {
@@ -32,5 +32,13 @@ class DataManipulation {
     
     func deleteData(at index: Int, context: NSManagedObjectContext) {
         context.delete(DataManipulation.recordsList[index])
+    }
+    
+    func saveCategories(context: NSManagedObjectContext) {
+        do {
+            try context.save()
+        } catch {
+            print("Error saving categories: \(error)")
+        }
     }
 }

@@ -27,6 +27,8 @@ class EditViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        roundTextView()
+        
         if let safeRecord = record {
             titleTextField.text = safeRecord.title
             textTextView.text = safeRecord.text
@@ -35,7 +37,6 @@ class EditViewController: UIViewController {
             
             if let index = DataManipulation.recordsList.firstIndex(where: {$0 === safeRecord}) {
                 currentIndex = index
-                print(currentIndex!)
             }
         } else {
             deleteButton.title = ""
@@ -47,13 +48,11 @@ class EditViewController: UIViewController {
     @IBAction func donePressed(_ sender: Any) {
                 
         if titleTextField.text != "" {
-            
             if currentIndex == nil {
                 let record = Record(context: context)
                 record.title = titleTextField.text
                 record.text = textTextView.text
                 record.date = Date()
-                
                 data.saveData(context: context)
             } else if currentIndex != nil {
                 DataManipulation.recordsList[currentIndex!].title = titleTextField.text
@@ -63,7 +62,6 @@ class EditViewController: UIViewController {
                 data.saveData(context: context)
             }
             navigationController?.popToRootViewController(animated: true)
-            
         } else {
             let alert = alert.addAlert(message: "Please add a title.", actionTitle: "OK")
             present(alert, animated: true)
@@ -90,6 +88,15 @@ extension EditViewController {
         dateFormatter.dateFormat = "d MMM yyyy   HH:mm"
         let dateString = dateFormatter.string(from: date)
         return dateString
+    }
+}
+
+//MARK: - TextView Fromatter
+
+extension EditViewController {
+    func roundTextView() {
+        textTextView.clipsToBounds = true
+        textTextView.layer.cornerRadius = textTextView.contentSize.width / 50
     }
 }
 
