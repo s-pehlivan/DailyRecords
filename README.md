@@ -18,6 +18,11 @@
 - Displaying every record sorted based on the time they are created
 
 
+## Secreenshots
+![](images/RecordsList.png)
+![](images/RecordPage.png)
+
+
 ## Setup
 To open this project locally, clone the project and open it in Xcode.
 
