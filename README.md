@@ -18,7 +18,7 @@
 - Displaying every record sorted based on the time they are created
 
 
-## Secreenshots
+## Screenshots
 <img src="images/RecordsList.png" width = "234" height = "506">  <img src="images/RecordPage.png" width = "234" height = "506">
 
 
