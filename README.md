@@ -23,7 +23,7 @@ To open this project locally, clone the project and open it in Xcode.
 
 
 ## Usage
-To create a category for different types of entries, go to the Core Data file 'DailyRecords,' create a new entity called 'Category' and set a new relationship with the existing category 'Record.'
+To create a category for different types of entries, go to the Core Data file 'DailyRecords,' create a new entity called 'Category' and set a new relationship with the existing entity 'Record.'
 
 
 ## Project Status
