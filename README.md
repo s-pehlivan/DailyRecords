@@ -19,9 +19,8 @@
 
 
 ## Secreenshots
-![](images/RecordsList.png)
-![](images/RecordPage.png)
-
+<img src="images/RecordsList.png" width = "20" height = "100">
+<img src="images/RecordPage.png" width = "20" height = "100">
 
 ## Setup
 To open this project locally, clone the project and open it in Xcode.
