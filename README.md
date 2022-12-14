@@ -19,8 +19,8 @@
 
 
 ## Secreenshots
-<img src="images/RecordsList.png" width = "234" height = "506">
-<img src="images/RecordPage.png" width = "234" height = "506">
+<img src="images/RecordsList.png" width = "234" height = "506">  <img src="images/RecordPage.png" width = "234" height = "506">
+
 
 ## Setup
 To open this project locally, clone the project and open it in Xcode.
